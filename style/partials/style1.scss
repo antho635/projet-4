@@ -14,7 +14,7 @@ body {
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
+}  
 
 a,
 button {
@@ -36,6 +36,12 @@ a:hover {
     background: #FFFFFF url("img/pageload-spinner.gif") no-repeat center center;
 }
 
+#bloc-1-hero {
+    background-image: url('la-chouette-agence-banniere-min.jpg');
+   }
+   
+   
+
 .bloc5 {
     display: flex;
     margin: auto;
@@ -47,7 +53,6 @@ a:hover {
     width: 100%;
     clear: both;
     background: 50% 50% no-repeat;
-    padding: 0 50px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

@@ -34,6 +34,10 @@ a:hover {
   background: #FFFFFF url("img/pageload-spinner.gif") no-repeat center center;
 }
 
+#bloc-1-hero {
+  background-image: url("la-chouette-agence-banniere-min.jpg");
+}
+
 .bloc5 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -52,7 +56,6 @@ a:hover {
   width: 100%;
   clear: both;
   background: 50% 50% no-repeat;
-  padding: 0 50px;
   background-size: cover;
   position: relative;
 }
@@ -309,10 +312,6 @@ a:hover {
 .row.row-no-gutters > [class*=" col-"] {
   padding-right: 0;
   padding-left: 0;
-}
-
-#bloc-1-hero {
-  background-image: url("img/la-chouette-agence-banniere-min.jpg");
 }
 
 #bloc-1-hero h1 {
@@ -1081,4 +1080,4 @@ h4 {
 /*FIN FICHIER STYLE !!!!*/
 /*FIN FICHIER STYLE !!!!*/
 /*FIN FICHIER STYLE !!!!*/
-/*# sourceMappingURL=fichierstyle.css.map */
+/*# sourceMappingURL=style1.css.map */
