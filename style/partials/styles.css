@@ -8611,8 +8611,13 @@ h4 {
 }
 
 .portfolio-row {
-  margin-bottom: 44px;
-  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: auto;
+  margin: 50px auto;
 }
 
 .avatar {
