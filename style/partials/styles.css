@@ -77,22 +77,14 @@
   }
 }
 
-@font-face {
-  font-family: 'Glyphicons Halflings';
-  src: url(../fonts/glyphicons-halflings-regular.eot);
-  src: url(../fonts/glyphicons-halflings-regular.eot?#iefix) format("embedded-opentype"), url(../fonts/glyphicons-halflings-regular.woff2) format("woff2"), url(../fonts/glyphicons-halflings-regular.woff) format("woff"), url(../fonts/glyphicons-halflings-regular.ttf) format("truetype"), url(../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format("svg");
-}
-
 .glyphicon {
   position: relative;
   top: 1px;
   display: inline-block;
-  font-family: 'Glyphicons Halflings';
+  font-family: 'Bellota', cursive, sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .glyphicon-asterisk:before {
@@ -1155,19 +1147,6 @@
   box-sizing: border-box;
 }
 
-html {
-  font-size: 10px;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: #333;
-  background-color: #fff;
-}
-
 button,
 input,
 select,
@@ -1450,6 +1429,14 @@ mark {
 
 .text-capitalize {
   text-transform: capitalize;
+}
+
+.bloc-1-hero {
+  background-image: url("./img/la-chouette-agence-banniere-min.jpg");
+}
+
+#bloc-3-what-i-do {
+  background-image: url("./img/image-de-presentation.jpg");
 }
 
 .text-muted {
@@ -1770,7 +1757,7 @@ pre code {
 
 @media (min-width: 1200px) {
   .container {
-    width: 1170px;
+    width: auto;
   }
 }
 
@@ -2059,7 +2046,7 @@ pre code {
   margin-left: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1200px) {
   .col-sm-1,
   .col-sm-10,
   .col-sm-11,
@@ -2072,7 +2059,7 @@ pre code {
   .col-sm-7,
   .col-sm-8,
   .col-sm-9 {
-    float: left;
+    float: none;
   }
   .col-sm-12 {
     width: 100%;
@@ -2836,6 +2823,13 @@ table th[class*=col-] {
   .table-responsive > .table-bordered > tfoot > tr:last-child > th {
     border-bottom: 0;
   }
+}
+
+.icone1,
+.icone2,
+.icone3 {
+  margin: auto;
+  width: 20%;
 }
 
 fieldset {
@@ -4018,10 +4012,6 @@ input[type=submit].btn-block {
   opacity: 1;
 }
 
-.collapse {
-  display: none;
-}
-
 .collapse.in {
   display: block;
 }
@@ -4952,7 +4942,6 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-brand {
-  float: left;
   height: 50px;
   padding: 15px 15px;
   font-size: 18px;
@@ -6012,16 +6001,6 @@ a.thumbnail:hover {
 
 .media:first-child {
   margin-top: 0;
-}
-
-.media,
-.media-body {
-  overflow: hidden;
-  zoom: 1;
-}
-
-.media-body {
-  width: 10000px;
 }
 
 .media-object {
@@ -7500,8 +7479,11 @@ button.close {
 .panel-body:before,
 .row:after,
 .row:before {
-  display: table;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   content: " ";
+  width: auto;
 }
 
 .btn-group-vertical > .btn-group:after,
@@ -7810,15 +7792,20 @@ button.close {
 /* fichier style !!! */
 body {
   width: 100%;
-  max-width: 2000px;
+  max-width: 2700px;
   height: auto;
   font-family: 'Bellota', cursive, sans-serif;
   margin: 0;
   padding: 0;
   background: #FFF;
   overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+}
+
+.page-container {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
 }
 
 a,
@@ -7840,10 +7827,6 @@ a:hover {
   width: 100%;
   z-index: 100000;
   background: #FFFFFF url("img/pageload-spinner.gif") no-repeat center center;
-}
-
-#bloc-1-hero {
-  background-image: url("la-chouette-agence-banniere-min.jpg");
 }
 
 .bloc5 {
@@ -7868,10 +7851,16 @@ a:hover {
   position: relative;
 }
 
+#icone1,
+#icone2,
+#icone3 {
+  margin: 20px 10px;
+}
+
 .fas {
   font-size: 100px;
   max-width: 40%;
-  margin: 20px auto;
+  margin: 30px auto;
 }
 
 .fab {
@@ -7881,17 +7870,8 @@ a:hover {
   max-width: 80px;
 }
 
-.bloc .container {
-  padding-left: 0;
-  padding-right: 0;
-}
-
 .bloc-lg {
   padding: 100px 50px;
-}
-
-.bloc-md {
-  padding: 50px;
 }
 
 .bloc-sm {
@@ -7920,6 +7900,7 @@ a:hover {
 }
 
 .bloc-bg-texture::before {
+  background-image: url("img/image-de-presentation.jpg");
   content: "";
   width: auto;
   position: absolute;
@@ -7930,7 +7911,7 @@ a:hover {
 }
 
 .texture-paper::before {
-  background: url("img/texture-paper.png");
+  background-image: url("img/image-de-presentation2.jpg");
   width: auto;
 }
 
@@ -8122,8 +8103,8 @@ a:hover {
   padding-left: 0;
 }
 
-#bloc-1-hero h1 {
-  font-size: 32px;
+.bloc-1-hero h1 {
+  font-size: 2em;
 }
 
 .navbar {
@@ -8199,6 +8180,55 @@ a:hover {
   float: right;
   position: relative;
   z-index: 2;
+}
+
+.bgc-atomic-tangerine {
+  background-color: #F3976C;
+  padding-top: 1px;
+}
+
+.light {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: auto;
+}
+
+@supports (mix-blend-mode: lighten) {
+  .gradient {
+    font-size: 1.5em;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+    color: #000;
+    background: #fff;
+    mix-blend-mode: multiply;
+    padding: 10px 0;
+    margin: 20px 0;
+  }
+  .gradient::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: -webkit-gradient(linear, right top, left top, from(#c77800), color-stop(#c77800), color-stop(#faaa54), color-stop(#ba68c8), color-stop(#9c6996), to(#8559da));
+    background: linear-gradient(to left, #c77800, #c77800, #faaa54, #ba68c8, #9c6996, #8559da);
+    mix-blend-mode: screen;
+  }
+}
+
+.bas {
+  height: 50px;
+}
+
+footer {
+  text-align: center;
 }
 
 @media (min-width: 768px) {
@@ -8493,22 +8523,22 @@ a {
   font-weight: 400;
 }
 
-.container {
-  max-width: 1000px;
+#hero-bloc-1 {
+  background-image: url("img/image-de-presentation.jpg");
 }
 
-.hero-bloc-text {
-  font-size: 38px;
+#hero-bloc-text {
+  font-size: 1.5em;
 }
 
-.hero-bloc-text-sub {
-  font-size: 36px;
+#hero-bloc-text-sub {
+  font-size: 1em;
 }
 
 .statement-bloc-text {
   line-height: 26px;
   font-style: italic;
-  font-size: 20px;
+  font-size: 1em;
   text-align: center;
   font-weight: lighter;
   max-width: 520px;
@@ -8520,8 +8550,7 @@ p {
 }
 
 .tight-width-whitespace {
-  max-width: 600px;
-  margin: auto auto auto auto;
+  margin: auto;
 }
 
 .h1 {
@@ -8548,14 +8577,14 @@ h2 {
 }
 
 h3 {
-  text-transform: uppercase;
-  font-weight: 700;
   color: #110f0f !important;
 }
 
 .med-width-whitespace {
-  max-width: 800px;
-  margin: auto auto auto auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
   -webkit-box-shadow: 0px 0px 0px #000000;
           box-shadow: 0px 0px 0px #000000;
 }
@@ -8664,22 +8693,8 @@ h4 {
 }
 
 .bg-presentation {
-  background-image: url("img/image-de-presentation.png");
+  background-image: url("img/image-de-presentation.jpg");
   width: auto;
-}
-
-@media (max-width: 1024px) {
-  .bloc {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  .bloc.full-width-bloc,
-  .bloc-tile-2.full-width-bloc .container,
-  .bloc-tile-3.full-width-bloc .container,
-  .bloc-tile-4.full-width-bloc .container {
-    padding-left: 0;
-    padding-right: 0;
-  }
 }
 
 @media (max-width: 992px) and (min-width: 768px) {
@@ -8711,13 +8726,19 @@ h4 {
     background-attachment: scroll;
   }
   .page-container,
-  #hero-bloc {
+  .hero-bloc {
     overflow-x: hidden;
     position: relative;
   }
   .bloc {
     padding-left: constant(safe-area-inset-left);
     padding-right: constant(safe-area-inset-right);
+  }
+  .icone1,
+  .icone2,
+  .icone3 {
+    margin: auto;
+    font-size: 50px;
   }
   .bloc-group,
   .bloc-group .bloc {
@@ -8766,6 +8787,32 @@ h4 {
     -webkit-transform: none;
     -ms-transform: none;
   }
+  .fas {
+    font-size: 50px;
+    max-width: a;
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: auto;
+  }
+  .social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: auto;
+    margin: auto;
+  }
   .nav > li {
     margin-top: 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -8785,10 +8832,10 @@ h4 {
     border-right-color: transparent;
     border-left-color: transparent;
   }
-  #hero-bloc .navbar .nav {
+  .hero-bloc .navbar .nav {
     background: rgba(0, 0, 0, 0.8);
   }
-  #hero-bloc .navbar .nav a {
+  .hero-bloc .navbar .nav a {
     color: rgba(255, 255, 255, 0.6);
   }
   .hero {
