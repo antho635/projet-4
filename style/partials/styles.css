@@ -5,6 +5,189 @@
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
+/*!
+ * Bootstrap v3.3.5 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+a {
+  background-color: transparent;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+dfn {
+  font-style: italic;
+}
+
+h1 {
+  margin: .67em 0;
+  font-size: 2em;
+}
+
+mark {
+  color: #000;
+  background: #ff0;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -.5em;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  margin: 1em 40px;
+}
+
+hr {
+  height: 0;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+pre {
+  overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0;
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+input {
+  line-height: normal;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+input[type=search] {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-appearance: textfield;
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+fieldset {
+  padding: .35em .625em .75em;
+  margin: 0 2px;
+  border: 1px solid silver;
+}
+
+legend {
+  padding: 0;
+  border: 0;
+}
+
+textarea {
+  overflow: auto;
+}
+
+optgroup {
+  font-weight: 700;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+/*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
   *,
   :after,
@@ -77,14 +260,22 @@
   }
 }
 
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url(../fonts/glyphicons-halflings-regular.eot);
+  src: url(../fonts/glyphicons-halflings-regular.eot?#iefix) format("embedded-opentype"), url(../fonts/glyphicons-halflings-regular.woff2) format("woff2"), url(../fonts/glyphicons-halflings-regular.woff) format("woff"), url(../fonts/glyphicons-halflings-regular.ttf) format("truetype"), url(../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format("svg");
+}
+
 .glyphicon {
   position: relative;
   top: 1px;
   display: inline-block;
-  font-family: 'Bellota', cursive, sans-serif;
+  font-family: 'Glyphicons Halflings';
   font-style: normal;
   font-weight: 400;
   line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .glyphicon-asterisk:before {
@@ -1147,6 +1338,19 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 10px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: #fff;
+}
+
 button,
 input,
 select,
@@ -1429,14 +1633,6 @@ mark {
 
 .text-capitalize {
   text-transform: capitalize;
-}
-
-.bloc-1-hero {
-  background-image: url("./img/la-chouette-agence-banniere-min.jpg");
-}
-
-#bloc-3-what-i-do {
-  background-image: url("./img/image-de-presentation.jpg");
 }
 
 .text-muted {
@@ -1743,24 +1939,6 @@ pre code {
   margin-left: auto;
 }
 
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    width: auto;
-  }
-}
-
 .container-fluid {
   padding-right: 15px;
   padding-left: 15px;
@@ -2046,7 +2224,7 @@ pre code {
   margin-left: 0;
 }
 
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: 768px) {
   .col-sm-1,
   .col-sm-10,
   .col-sm-11,
@@ -2059,7 +2237,7 @@ pre code {
   .col-sm-7,
   .col-sm-8,
   .col-sm-9 {
-    float: none;
+    float: left;
   }
   .col-sm-12 {
     width: 100%;
@@ -2823,13 +3001,6 @@ table th[class*=col-] {
   .table-responsive > .table-bordered > tfoot > tr:last-child > th {
     border-bottom: 0;
   }
-}
-
-.icone1,
-.icone2,
-.icone3 {
-  margin: auto;
-  width: 20%;
 }
 
 fieldset {
@@ -4012,6 +4183,10 @@ input[type=submit].btn-block {
   opacity: 1;
 }
 
+.collapse {
+  display: none;
+}
+
 .collapse.in {
   display: block;
 }
@@ -4830,12 +5005,6 @@ textarea.input-group-sm > .input-group-btn > .btn {
   }
 }
 
-@media (min-width: 768px) {
-  .navbar-header {
-    float: left;
-  }
-}
-
 .navbar-collapse {
   padding-right: 15px;
   padding-left: 15px;
@@ -4942,6 +5111,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-brand {
+  float: left;
   height: 50px;
   padding: 15px 15px;
   font-size: 18px;
@@ -6001,6 +6171,16 @@ a.thumbnail:hover {
 
 .media:first-child {
   margin-top: 0;
+}
+
+.media,
+.media-body {
+  overflow: hidden;
+  zoom: 1;
+}
+
+.media-body {
+  width: 10000px;
 }
 
 .media-object {
@@ -7479,11 +7659,8 @@ button.close {
 .panel-body:before,
 .row:after,
 .row:before {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: table;
   content: " ";
-  width: auto;
 }
 
 .btn-group-vertical > .btn-group:after,
@@ -7801,6 +7978,10 @@ body {
   overflow-x: hidden;
 }
 
+.bloc2 {
+  background-image: url("image-de-presentation.jpg");
+}
+
 .page-container {
   width: 100%;
   height: auto;
@@ -7827,6 +8008,31 @@ a:hover {
   width: 100%;
   z-index: 100000;
   background: #FFFFFF url("img/pageload-spinner.gif") no-repeat center center;
+}
+
+.navbar-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#titreprincipale {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 30%;
+}
+
+.logoheader {
+  width: 10%;
+  height: 10%;
 }
 
 .bloc5 {
@@ -7876,6 +8082,16 @@ a:hover {
 
 .bloc-sm {
   padding: 20px 50px;
+}
+
+#bloc-8 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: auto;
 }
 
 .bg-center,

@@ -11,6 +11,10 @@ body {
   overflow-x: hidden;
 }
 
+.bloc2 {
+  background-image: url("image-de-presentation.jpg");
+}
+
 .page-container {
   width: 100%;
   height: auto;
@@ -37,6 +41,31 @@ a:hover {
   width: 100%;
   z-index: 100000;
   background: #FFFFFF url("img/pageload-spinner.gif") no-repeat center center;
+}
+
+.navbar-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#titreprincipale {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 30%;
+}
+
+.logoheader {
+  width: 10%;
+  height: 10%;
 }
 
 .bloc5 {
@@ -86,6 +115,16 @@ a:hover {
 
 .bloc-sm {
   padding: 20px 50px;
+}
+
+#bloc-8 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: auto;
 }
 
 .bg-center,
