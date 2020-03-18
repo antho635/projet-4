@@ -1815,6 +1815,9 @@ dd {
   .dl-horizontal dd {
     margin-left: 180px;
   }
+  .background {
+    background-image: url("img/imagefond.jpg");
+  }
 }
 
 abbr[data-original-title],
@@ -7106,12 +7109,6 @@ button.close {
   }
   .modal-sm {
     width: 300px;
-  }
-}
-
-@media (min-width: 992px) {
-  .modal-lg {
-    width: 900px;
   }
 }
 
