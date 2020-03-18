@@ -7,12 +7,75 @@ html {
 }
 
 body {
+  font-family: 'Ubuntu', helvetica, sans-serif;
   margin: 0;
   padding: 0;
   background: #FFF;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.background {
+  background-color: #00695c;
+}
+
+#icone1,
+#icone2,
+#icone3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.light {
+  padding: 40px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@supports (mix-blend-mode: lighten) {
+  .gradient {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+    color: #000;
+    background: #fff;
+    mix-blend-mode: multiply;
+  }
+  .gradient::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: -webkit-gradient(linear, left top, right bottom, from(#b71c1c), color-stop(#e53935), color-stop(#7b1fa2), color-stop(#5e35b1), to(#3f51b5));
+    background: linear-gradient(to right bottom, #b71c1c, #e53935, #7b1fa2, #5e35b1, #3f51b5);
+    mix-blend-mode: screen;
+  }
+}
+
+p {
+  font-size: 1.3em;
+}
+
+#cta-hero {
+  margin-bottom: 30px;
+}
+
+.text-center {
+  text-align: center;
+  font-size: 1.3em;
 }
 
 a,
@@ -46,16 +109,22 @@ a:hover {
 }
 
 .bloc .container {
-  padding-left: 0;
-  padding-right: 0;
+  width: 60%;
 }
 
-.bloc-lg {
-  padding: 100px 50px;
+.adresse {
+  text-align: center;
 }
 
-.bloc-md {
-  padding: 50px;
+#bloc-5-cta > div:nth-child(1) {
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .bloc-sm {
@@ -81,21 +150,6 @@ a:hover {
 
 .bg-t-edge {
   background: top no-repeat;
-}
-
-.bloc-bg-texture::before {
-  content: "";
-  background-size: 2px 2px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-.texture-paper::before {
-  background: url("img/texture-paper.png");
-  background-size: 280px 280px;
 }
 
 .b-parallax {
@@ -286,15 +340,6 @@ a:hover {
   padding-left: 0;
 }
 
-#bloc-1-hero {
-  background-image: url("img/image-de-presentation.jpg");
-}
-
-.navbar {
-  margin-bottom: 0;
-  z-index: 1;
-}
-
 .navbar-brand {
   height: auto;
   padding: 3px 15px;
@@ -365,7 +410,7 @@ a:hover {
   z-index: 2;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .site-navigation {
     position: absolute;
     top: 50%;
@@ -538,13 +583,16 @@ button {
 
 a[data-lightbox] {
   position: relative;
-  display: block;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 a[data-lightbox]:hover::before {
   content: "+";
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial;
   font-size: 32px;
   width: 50px;
   height: 50px;
@@ -658,7 +706,6 @@ p,
 label,
 .btn,
 a {
-  font-family: "helvetica";
   font-weight: 400;
   color: #575757 !important;
 }
@@ -686,13 +733,8 @@ p {
 }
 
 .tight-width-whitespace {
-  max-width: 600px;
-  margin: auto auto auto auto;
-}
-
-.h1 {
-  font-size: 20px;
-  text-align: center;
+  max-width: 80%;
+  margin: auto;
 }
 
 .cta-hero {
@@ -767,10 +809,6 @@ h4 {
   background-color: #FFFFFF;
 }
 
-.bgc-dark-slate-blue {
-  background-color: #364577;
-}
-
 .bgc-atomic-tangerine {
   background-color: #F3976C;
 }
@@ -827,6 +865,12 @@ footer {
 }
 
 @media (max-width: 1024px) {
+  .page-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+  }
   .bloc {
     padding-left: 20px;
     padding-right: 20px;
@@ -837,6 +881,9 @@ footer {
   .bloc-tile-4.full-width-bloc .container {
     padding-left: 0;
     padding-right: 0;
+  }
+  .bloc .container {
+    width: 100%;
   }
 }
 
@@ -958,14 +1005,8 @@ footer {
     padding-right: 0;
   }
   .bloc-xxl,
-  .bloc-xl,
-  .bloc-lg {
+  .bloc-xl {
     padding: 40px 0;
-  }
-  .bloc-sm,
-  .bloc-md {
-    padding-left: 0;
-    padding-right: 0;
   }
   .bloc-tile-2 .container,
   .bloc-tile-3 .container,

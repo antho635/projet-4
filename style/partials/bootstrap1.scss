@@ -5,12 +5,6 @@
  */
          /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
          
-         html {
-             font-family: sans-serif;
-             -webkit-text-size-adjust: 100%;
-             -ms-text-size-adjust: 100%
-         }
-         
          body {
              margin: 0
          }
@@ -128,7 +122,6 @@
          kbd,
          pre,
          samp {
-             font-family: monospace, monospace;
              font-size: 1em
          }
          
@@ -244,10 +237,10 @@
                  text-decoration: underline
              }
              a[href]:after {
-                 content: " (" attr(href) ")"
+                 content: " ("attr(href) ")"
              }
              abbr[title]:after {
-                 content: " (" attr(title) ")"
+                 content: " ("attr(title) ")"
              }
              a[href^="javascript:"]:after,
              a[href^="#"]:after {
@@ -301,17 +294,10 @@
              }
          }
          
-         @font-face {
-             font-family: 'Glyphicons Halflings';
-             src: url(../fonts/glyphicons-halflings-regular.eot);
-             src: url(../fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'), url(../fonts/glyphicons-halflings-regular.woff2) format('woff2'), url(../fonts/glyphicons-halflings-regular.woff) format('woff'), url(../fonts/glyphicons-halflings-regular.ttf) format('truetype'), url(../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg')
-         }
-         
          .glyphicon {
              position: relative;
              top: 1px;
              display: inline-block;
-             font-family: 'Glyphicons Halflings';
              font-style: normal;
              font-weight: 400;
              line-height: 1;
@@ -1382,13 +1368,10 @@
          }
          
          html {
-             font-size: 10px;
              -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
          }
          
          body {
-             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-             font-size: 14px;
              line-height: 1.42857143;
              color: #333;
              background-color: #fff
@@ -1398,7 +1381,6 @@
          input,
          select,
          textarea {
-             font-family: inherit;
              font-size: inherit;
              line-height: inherit
          }
@@ -1504,7 +1486,6 @@
          h4,
          h5,
          h6 {
-             font-family: inherit;
              font-weight: 500;
              line-height: 1.1;
              color: inherit
@@ -1915,13 +1896,6 @@
              line-height: 1.42857143
          }
          
-         code,
-         kbd,
-         pre,
-         samp {
-             font-family: Menlo, Monaco, Consolas, "Courier New", monospace
-         }
-         
          code {
              padding: 2px 4px;
              font-size: 90%;
@@ -1986,11 +1960,6 @@
              padding-left: 15px;
              margin-right: auto;
              margin-left: auto
-         }
-         
-         .row {
-             margin-right: -15px;
-             margin-left: -15px
          }
          
          .col-lg-1,
@@ -7189,7 +7158,6 @@
              position: absolute;
              z-index: 1070;
              display: block;
-             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
              font-size: 12px;
              font-style: normal;
              font-weight: 400;
@@ -7323,7 +7291,6 @@
              display: none;
              max-width: 276px;
              padding: 1px;
-             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
              font-size: 14px;
              font-style: normal;
              font-weight: 400;
@@ -7626,7 +7593,6 @@
          .carousel-control .icon-prev {
              width: 20px;
              height: 20px;
-             font-family: serif;
              line-height: 1
          }
          
@@ -7769,8 +7735,7 @@
          
          .center-block {
              display: block;
-             margin-right: auto;
-             margin-left: auto
+             margin: 30px auto;
          }
          
          .pull-right {
