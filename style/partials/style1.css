@@ -831,6 +831,7 @@ footer {
       -ms-flex-pack: center;
           justify-content: center;
   margin: auto;
+  padding-top: 15px;
 }
 
 #bloc-3-what-i-do {
