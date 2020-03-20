@@ -1,9 +1,222 @@
-/*
+/*!
  * Bootstrap v3.3.5 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+body {
+  margin: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden],
+template {
+  display: none;
+}
+
+a {
+  background-color: transparent;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+dfn {
+  font-style: italic;
+}
+
+h1 {
+  margin: .67em 0;
+  font-size: 2em;
+}
+
+mark {
+  color: #000;
+  background: #ff0;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -.5em;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  margin: 1em 40px;
+}
+
+hr {
+  height: 0;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+pre {
+  overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-size: 1em;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0;
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+input {
+  line-height: normal;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+input[type=search] {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-appearance: textfield;
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+fieldset {
+  padding: .35em .625em .75em;
+  margin: 0 2px;
+  border: 1px solid silver;
+}
+
+legend {
+  padding: 0;
+  border: 0;
+}
+
+textarea {
+  overflow: auto;
+}
+
+optgroup {
+  font-weight: 700;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: 0;
+}
+
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
   *,
@@ -81,10 +294,11 @@
   position: relative;
   top: 1px;
   display: inline-block;
-  font-family: 'Bellota', cursive, sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .glyphicon-asterisk:before {
@@ -1147,11 +1361,20 @@
   box-sizing: border-box;
 }
 
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  line-height: 1.42857143;
+  color: #333;
+  background-color: #fff;
+}
+
 button,
 input,
 select,
 textarea {
-  font-family: inherit;
   font-size: inherit;
   line-height: inherit;
 }
@@ -1256,7 +1479,6 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: inherit;
   font-weight: 500;
   line-height: 1.1;
   color: inherit;
@@ -1429,14 +1651,6 @@ mark {
 
 .text-capitalize {
   text-transform: capitalize;
-}
-
-.bloc-1-hero {
-  background-image: url("./img/la-chouette-agence-banniere-min.jpg");
-}
-
-#bloc-3-what-i-do {
-  background-image: url("./img/image-de-presentation.jpg");
 }
 
 .text-muted {
@@ -1675,13 +1889,6 @@ address {
   line-height: 1.42857143;
 }
 
-code,
-kbd,
-pre,
-samp {
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-}
-
 code {
   padding: 2px 4px;
   font-size: 90%;
@@ -1737,28 +1944,8 @@ pre code {
 }
 
 .container {
-  padding-right: 15px;
-  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-}
-
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    width: auto;
-  }
 }
 
 .container-fluid {
@@ -1766,11 +1953,6 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-}
-
-.row {
-  margin-right: -15px;
-  margin-left: -15px;
 }
 
 .col-lg-1,
@@ -2046,7 +2228,7 @@ pre code {
   margin-left: 0;
 }
 
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: 768px) {
   .col-sm-1,
   .col-sm-10,
   .col-sm-11,
@@ -2059,7 +2241,7 @@ pre code {
   .col-sm-7,
   .col-sm-8,
   .col-sm-9 {
-    float: none;
+    float: left;
   }
   .col-sm-12 {
     width: 100%;
@@ -2825,13 +3007,6 @@ table th[class*=col-] {
   }
 }
 
-.icone1,
-.icone2,
-.icone3 {
-  margin: auto;
-  width: 20%;
-}
-
 fieldset {
   min-width: 0;
   padding: 0;
@@ -2909,7 +3084,6 @@ output {
   line-height: 1.42857143;
   color: #555;
   background-color: #fff;
-  background-image: none;
   border: 1px solid #ccc;
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -3435,7 +3609,6 @@ textarea.input-lg {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  background-image: none;
   border: 1px solid transparent;
   border-radius: 4px;
 }
@@ -3460,7 +3633,6 @@ textarea.input-lg {
 
 .btn.active,
 .btn:active {
-  background-image: none;
   outline: 0;
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
@@ -3520,12 +3692,6 @@ fieldset[disabled] a.btn {
   color: #333;
   background-color: #d4d4d4;
   border-color: #8c8c8c;
-}
-
-.btn-default.active,
-.btn-default:active,
-.open > .dropdown-toggle.btn-default {
-  background-image: none;
 }
 
 .btn-default.disabled,
@@ -3596,12 +3762,6 @@ fieldset[disabled] .btn-default:hover {
   border-color: #122b40;
 }
 
-.btn-primary.active,
-.btn-primary:active,
-.open > .dropdown-toggle.btn-primary {
-  background-image: none;
-}
-
 .btn-primary.disabled,
 .btn-primary.disabled.active,
 .btn-primary.disabled.focus,
@@ -3668,12 +3828,6 @@ fieldset[disabled] .btn-primary:hover {
   color: #fff;
   background-color: #398439;
   border-color: #255625;
-}
-
-.btn-success.active,
-.btn-success:active,
-.open > .dropdown-toggle.btn-success {
-  background-image: none;
 }
 
 .btn-success.disabled,
@@ -3744,12 +3898,6 @@ fieldset[disabled] .btn-success:hover {
   border-color: #1b6d85;
 }
 
-.btn-info.active,
-.btn-info:active,
-.open > .dropdown-toggle.btn-info {
-  background-image: none;
-}
-
 .btn-info.disabled,
 .btn-info.disabled.active,
 .btn-info.disabled.focus,
@@ -3818,12 +3966,6 @@ fieldset[disabled] .btn-info:hover {
   border-color: #985f0d;
 }
 
-.btn-warning.active,
-.btn-warning:active,
-.open > .dropdown-toggle.btn-warning {
-  background-image: none;
-}
-
 .btn-warning.disabled,
 .btn-warning.disabled.active,
 .btn-warning.disabled.focus,
@@ -3890,12 +4032,6 @@ fieldset[disabled] .btn-warning:hover {
   color: #fff;
   background-color: #ac2925;
   border-color: #761c19;
-}
-
-.btn-danger.active,
-.btn-danger:active,
-.open > .dropdown-toggle.btn-danger {
-  background-image: none;
 }
 
 .btn-danger.disabled,
@@ -4010,6 +4146,10 @@ input[type=submit].btn-block {
 
 .fade.in {
   opacity: 1;
+}
+
+.collapse {
+  display: none;
 }
 
 .collapse.in {
@@ -4128,7 +4268,6 @@ tbody.collapse.in {
   text-decoration: none;
   cursor: not-allowed;
   background-color: transparent;
-  background-image: none;
 }
 
 .open > .dropdown-menu {
@@ -4879,7 +5018,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   max-height: 340px;
 }
 
-@media (max-device-width: 480px) and (orientation: landscape) {
+@media (max-width: 480px) and (orientation: landscape) {
   .navbar-fixed-bottom .navbar-collapse,
   .navbar-fixed-top .navbar-collapse {
     max-height: 200px;
@@ -4942,6 +5081,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-brand {
+  float: left;
   height: 50px;
   padding: 15px 15px;
   font-size: 18px;
@@ -4972,7 +5112,6 @@ textarea.input-group-sm > .input-group-btn > .btn {
   margin-right: 15px;
   margin-bottom: 8px;
   background-color: transparent;
-  background-image: none;
   border: 1px solid transparent;
   border-radius: 4px;
 }
@@ -5025,10 +5164,6 @@ textarea.input-group-sm > .input-group-btn > .btn {
   }
   .navbar-nav .open .dropdown-menu > li > a {
     line-height: 20px;
-  }
-  .navbar-nav .open .dropdown-menu > li > a:focus,
-  .navbar-nav .open .dropdown-menu > li > a:hover {
-    background-image: none;
   }
 }
 
@@ -5769,7 +5904,7 @@ a.badge:hover {
   max-width: 100%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1920px) {
   .jumbotron {
     padding-top: 48px;
     padding-bottom: 48px;
@@ -6001,6 +6136,16 @@ a.thumbnail:hover {
 
 .media:first-child {
   margin-top: 0;
+}
+
+.media,
+.media-body {
+  overflow: hidden;
+  zoom: 1;
+}
+
+.media-body {
+  width: 10000px;
 }
 
 .media-object {
@@ -6919,17 +7064,10 @@ button.close {
   }
 }
 
-@media (min-width: 992px) {
-  .modal-lg {
-    width: 900px;
-  }
-}
-
 .tooltip {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -7063,7 +7201,6 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -7360,7 +7497,6 @@ button.close {
 .carousel-control .icon-prev {
   width: 20px;
   height: 20px;
-  font-family: serif;
   line-height: 1;
 }
 
@@ -7479,11 +7615,8 @@ button.close {
 .panel-body:before,
 .row:after,
 .row:before {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: table;
   content: " ";
-  width: auto;
 }
 
 .btn-group-vertical > .btn-group:after,
@@ -7506,8 +7639,7 @@ button.close {
 
 .center-block {
   display: block;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 30px auto;
 }
 
 .pull-right {
